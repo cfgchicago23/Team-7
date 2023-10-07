@@ -22,7 +22,7 @@ function LoginForm() {
     console.log(credentials);
     const isLoginSuccessful = true; //placeholder for mongo
     if (isLoginSuccessful) {
-      navigate('/dashboard');
+      navigate('/profile');
     }
   };
 
@@ -57,12 +57,10 @@ function LoginForm() {
             </label>
             <div className="button-container">
               <button type="submit" className="login-button">Login</button>
-              {/* If you have a sign up button or other buttons, add them here */}
             </div>
           </form>
         </div>
       </div>
-      {/* If you have a footer or other components, you can add them below */}
     </div>
   );
 }
