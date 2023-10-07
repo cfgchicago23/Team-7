@@ -16,6 +16,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
+    padding: 45px;
 }
 
 .contact-card {
@@ -26,7 +27,7 @@
     flex-direction: column;
     padding: 13px;
     padding-bottom: 20px;
-    background-color: lightgreen;
+    background-color: #59b025;
 }
 
 .contact-card:hover {

@@ -65,7 +65,7 @@ function Profile() {
             <div className="profile-image"></div>
                 <div className="profile-info">
                     <div className="profile-text">
-                    <h2>{ref(database, `names_for_users/${firstNameKey}`)}</h2>
+                    <h2>John Doe</h2>
                         <p>
                             Hours Volunteered: <span className="star"></span> {hoursVolunteered}⭐
                             </p>
