@@ -9,6 +9,7 @@
 .profile-text {
     margin-top: 0;
     margin-bottom: 0;
+    align-items: center;
 }
 
 .profile-container {
@@ -85,3 +86,8 @@
     background-color: black;
     margin: 20px 0;
 }
+
+.contact-card .skill-button {
+    margin-top: 10px;
+}
+
