@@ -1,17 +1,33 @@
 import React from 'react';
+import Navbar from './components/Navbar';
+import Events from "./pages/Events"
+import Profile from "./pages/Profile"
+import Share from "./pages/Share"
+import Resources from "./pages/Resources"
 import './App.css';
 
 function App() {
+  let component
+  switch(window.location.pathname){
+    case "/profile":
+      component = <Profile/>
+      break
+    case "/upcoming_events":
+      component = <Events/>
+      break
+    case "/share":
+      component = <Share/>
+      break
+    case "/resources":
+      component = <Resources/>
+      break
+  }
   return (
-    //homepage and login button
-    <div className="app">
-      <header className="app-header">
-        <h1>Rebuilding Together Aurora</h1>
-        <button className="login-button">Login</button>
-      </header>
-      {}
-    </div>
-  );
+    <>
+      <Navbar/>
+      {component}
+    </>
+  ) 
 }
 
 export default App;
