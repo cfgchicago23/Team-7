@@ -1,5 +1,5 @@
 .resource-page-header {
-    background-color: antiquewhite;
+    background-color: white;
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -59,7 +59,7 @@
 
 .module-button:hover {
     cursor: pointer;
-    border-color: black;
+    border-color: #668A3D;
 }
 
 .resource-module-container-contents {
@@ -71,7 +71,7 @@
 }
 
 .resource-module-container {
-    background-color: antiquewhite;
+    background-color: white;
     margin: 20px;
     border-radius: 10px;
 }
