@@ -41,7 +41,7 @@ function Resources() {
       ],
     },
     {
-      "module-title": "Plumbering",
+      "module-title": "Plumbing",
       videos: [
         {
           title: "How to Connect a Broken PVC Pipe",
@@ -105,7 +105,7 @@ function Resources() {
     } else if (selectedModule === "Woodcutting") {
       updatedModuleButtonColors[1] = "#668A3D";
       setVideoList(videoLinks[1].videos);
-    } else if (selectedModule === "Plumbering") {
+    } else if (selectedModule === "Plumbing") {
       updatedModuleButtonColors[2] = "#668A3D";
       setVideoList(videoLinks[2].videos);
     }
@@ -148,7 +148,7 @@ function Resources() {
               <input
                 className="module-button"
                 type="button"
-                value="Plumbering"
+                value="Plumbing"
                 onClick={handleSelectedModule}
                 style={{ backgroundColor: moduleButtonColors[2] }}
               ></input>

@@ -5,7 +5,7 @@ import volunteering from "./volunteering.jpg";
 import LoginForm from './pages/LoginForm';  // Ensure the path is correct
 import Navbar_Login from './navbar_login';
 function App() {
-
+  
   return (
     <div className="app">
       <Navbar_Login/>
@@ -37,4 +37,3 @@ function App() {
 
 
 export default App;
-

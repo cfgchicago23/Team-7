@@ -52,6 +52,10 @@
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
+.contact-card:hover {
+    cursor: pointer;
+  }  
+
 .info-group {
     display: flex;
     align-items: center;

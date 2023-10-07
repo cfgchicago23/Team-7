@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
+const appSettings = {
+  databaseURL: "https://jphackathon-ee6c3-default-rtdb.firebaseio.com/"
+}
+
+const app = initializeApp(appSettings)
+const database = getDatabase(app)
+const signUpInDB = ref(database, "users")
+ 
 function LoginForm() {
   const [credentials, setCredentials] = useState({
     username: '',
@@ -23,6 +33,7 @@ function LoginForm() {
     const isLoginSuccessful = true; //placeholder for mongo
     if (isLoginSuccessful) {
       navigate('/profile');
+      push(signUpInDB, credentials)
     }
   };
 

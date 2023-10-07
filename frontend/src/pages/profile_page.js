@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './profile_page.css'; // Import your CSS file
 import event_img from "./upcoming_events.jpg"
 import star_img from "./star.png"
+import user_prof from "./userprofile.png"
 import Navbar from '../navbar';
 
 function Profile() {
@@ -29,7 +30,7 @@ function Profile() {
             name: "House Remodel Event",
             phone: "(212) 555-4567",
             email: "thecat@hotmail.com",
-            tags: ["General Volunteer", "Flooring"]
+            tags: ["General Volunteer", "Flooring", "Landscaping"]
         },
         {
             name: "Corporate Group Volunteering",
