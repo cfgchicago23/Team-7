@@ -39,14 +39,14 @@ function Profile() {
         
             <div className="contact-card">
                 <img src={event_img}/>
-                <h3>Mr. Whiskerson</h3>
+                <h3>Veteran's Fall Clean-Up</h3>
                 <div className="info-group">
                     <img src={star_img}/>
                     <p>(212) 555-1234</p>
                 </div>
                 <div className="info-group">
                     <img src={star_img} />
-                    <p>mr.whiskaz@catnap.meow</p>
+                    <p>a@gmail.com</p>
                 </div>
                 <div className="tags">
                             <button className="skill-button">Carpentry</button>
@@ -55,14 +55,14 @@ function Profile() {
             
             <div className="contact-card">
                 <img src={event_img}/>
-                <h3>Fluffykins</h3>
+                <h3>Clean-Up Event</h3>
                 <div className="info-group">
                     <img src={star_img} />
                     <p>(212) 555-2345</p>
                 </div>
                 <div className="info-group">
                     <img src={star_img}/>
-                    <p>fluff@me.com</p>
+                    <p>becca@gmail.com</p>
                 </div>
                 <div className="tags">
                             <button className="skill-button">Flooring</button>
@@ -71,7 +71,7 @@ function Profile() {
             
             <div className="contact-card">
                 <img src={event_img}/>
-                <h3>Felix</h3>
+                <h3>House Remodel Event</h3>
                 <div className="info-group">
                     <img src={star_img} />
                     <p>(212) 555-4567</p>
@@ -87,14 +87,14 @@ function Profile() {
             
             <div className="contact-card">
                 <img src={event_img}/>
-                <h3>Felix</h3>
+                <h3>Corporate Group Volunteering</h3>
                 <div className="info-group">
                     <img src={star_img} />
                     <p>(212) 555-4567</p>
                 </div>
                 <div className="info-group">
                     <img src={star_img} />
-                    <p>thecat@hotmail.com</p>
+                    <p>thebusiness@hotmail.com</p>
                 </div>
 		                <div className="tags">
                             <button className="skill-button">Painting</button>
