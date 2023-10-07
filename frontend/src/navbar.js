@@ -14,8 +14,12 @@ export default function Navbar(){
             <li>
                 <a href = "/share">Share</a>
             </li>
+            
             <li>
                 <a href = "/resources">Resources</a>
+            </li>
+            <li>
+                <a href = "/leaderboard">Leaderboard</a>
             </li>
             <li>
                 <a href = "/">Logout</a>
