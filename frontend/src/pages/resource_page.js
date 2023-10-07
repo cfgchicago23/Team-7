@@ -64,6 +64,7 @@ function Resources() {
     "#FFFFFF",
     "#FFFFFF",
   ]);
+
   const [videoList, setVideoList] = useState(videoLinks[0].videos);
   const [videoID, setVideoID] = useState("hlJUezuNFuI");
 
