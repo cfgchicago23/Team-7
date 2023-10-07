@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-//import Layout from "./Layout";
+import Layout from "./Layout";
 import Home from "./App";
 import Share from "./Share";
 import LoginForm from "./pages/LoginForm";
@@ -20,6 +20,8 @@ export default function App() {
           <Route path="share" element={<Share />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="card" element={<Card />} />
+
         </Route>
       </Routes>
     </BrowserRouter>

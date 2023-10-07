@@ -1,4 +1,5 @@
 import React from 'react';
+import trophy from "./CFG-trophy.webp";
 
 // share RTA to social media
 function Share() {
@@ -9,8 +10,12 @@ function Share() {
         <button className="login-button">Login</button>
       </header>
       <body className='share-body'>
-        <p>Screenshot this!</p>
+        <p style={{fontSize:"25pt", fontFamily:"Baskerville Old Face"}}>Screenshot this!</p>
         <div className='screenshot-box'>
+        <img src={trophy} id="trophy-pic" alt="trophy pic"></img>
+        <p style={{fontSize:"14pt", fontFamily:"Baskerville Old Face"}}>I volunteered</p>
+        {/* Add hours data through json or database */}
+        <p style={{fontSize:"14pt", fontFamily:"Baskerville Old Face"}}>hours with Rebuilding Together Aurora</p>
         </div>
       </body>
     </div>
