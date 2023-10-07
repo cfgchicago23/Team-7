@@ -6,16 +6,20 @@ export default function Navbar(){
         <img src={logo} alt="Logo" className="logo" />
         <ul>
             <li>
-                <a href = "/card">Upcoming Events</a>
+                <a href = "/card">Events</a>
             </li>
             <li>
-                <a href = "/profile">Volunteer Profile</a>   
+                <a href = "/profile">Profile</a>   
             </li>
             <li>
                 <a href = "/share">Share</a>
             </li>
+            
             <li>
                 <a href = "/resources">Resources</a>
+            </li>
+            <li>
+                <a href = "/leaderboard">Leaderboard</a>
             </li>
             <li>
                 <a href = "/">Logout</a>

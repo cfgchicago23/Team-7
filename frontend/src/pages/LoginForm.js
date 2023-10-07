@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
-
+var user = '';
 const appSettings = {
   databaseURL: "https://jphackathon-ee6c3-default-rtdb.firebaseio.com/"
 }
@@ -31,6 +31,7 @@ function LoginForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(credentials);
+    user = credentials.username;
     const isLoginSuccessful = true; //placeholder for mongo
     if (isLoginSuccessful) {
       navigate('/profile');
@@ -76,5 +77,5 @@ function LoginForm() {
     </div>
   );
 }
-
+export {user};
 export default LoginForm;

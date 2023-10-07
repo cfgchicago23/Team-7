@@ -8,7 +8,7 @@ import ins from "./instagram logo.png";
 function Share() {
   return (
     <div>
-      <Navbar/> 
+      <Navbar/>
       <body className='share-body'>
         <p style={{fontSize:"25pt", fontFamily:"Baskerville Old Face"}}>Screenshot this!</p>
         <div className='screenshot-box'>
