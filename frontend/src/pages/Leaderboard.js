@@ -12,8 +12,8 @@ function Leaderboard() {
 
     return (
         //display leaderboard
-        <div className="Leaderboard">
-            <header className="Leaderboard-header">
+        <div className="leaderboard">
+            <header className="leaderboard-header">
                 <h1>Leaderboard</h1>
                 <ul className="leaderboard-list">
                     {players.map(player => (

@@ -227,7 +227,7 @@
     background-color: black;
   }
 
-  .Leaderboard {
+  .leaderboard {
     font-family: Arial, sans-serif;
     background-color: #282c34;
     text-align: center;
@@ -240,7 +240,7 @@
     color: white;
 }
 
-.Leaderboard-header {
+.leaderboard-header {
     background-color: #282c34;
     padding: 20px;
     width: 60%;
