@@ -1,6 +1,7 @@
 import './Navbar.css'
 import logo from './rebuilding_aurora_logo.png';
 
+// comments
 export default function Navbar(){
     return <nav className = "nav">
         <img src={logo} alt="Logo" className="logo" />
