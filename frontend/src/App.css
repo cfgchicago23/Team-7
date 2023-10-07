@@ -2,7 +2,7 @@
 .app {
   font-family: 'Arial', sans-serif;
   color: black; /* Lighter green font color */
-  background-color: #8FCB81; /* Black background for the entire app */
+  background-color: white; /* Black background for the entire app */
 }
 
 .app-header {
@@ -33,6 +33,17 @@
   border-color: #76B56D; /* Slightly darker shade of green for hover effect */
   transform: scale(1.05); /* Button slightly enlarges on hover */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+.share-body {
+  text-align: center;
+}
+
+.screenshot-box {
+  display: inline-block;
+  width: 180px;
+  height: 320px;
+  background: black;
 }
 
 /* Title's color adjusted for better visibility against darker backgrounds */
