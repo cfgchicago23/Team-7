@@ -1,0 +1,23 @@
+.resource-page {
+    margin: 20px;
+}
+
+.resource-page-title
+
+.resource-section-title {
+    font-size: medium;
+    margin-block-end: 0em;
+}
+
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video-item {
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 450px;
+    height:300px;
+}

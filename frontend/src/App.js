@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ResourcesPage from './ResourcesPage';
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
         <h1>Rebuilding Together Aurora</h1>
         <button className="login-button">Login</button>
       </header>
+
+      <ResourcesPage />
       {}
     </div>
   );

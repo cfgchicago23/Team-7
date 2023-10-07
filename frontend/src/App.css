@@ -2,7 +2,7 @@
 .app {
   font-family: 'Arial', sans-serif;
   color: black; /* Lighter green font color */
-  background-color: #8FCB81; /* Black background for the entire app */
+  /* background-color: #8FCB81; Black background for the entire app */
 }
 
 .app-header {
