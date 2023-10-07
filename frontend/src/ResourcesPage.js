@@ -1,9 +1,22 @@
 import './ResourcesPage.css';
 
 function ResourcesPage() {
+
+    const handleClick = () => {
+        
+
+    }
+
+
   return (
     <div className="resource-page">
       <h2 className="resource-page-title">Resources</h2>
+
+      <div className="resource-page-filter">
+        <button onClick={handleClick}>Plumbing</button>
+        <button onClick={handleClick}>Painting</button>
+        <button onClick={handleClick}>Climbing</button>
+      </div>
 
       <hr></hr>
 
