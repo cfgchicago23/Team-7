@@ -1,7 +1,7 @@
-import "./ResourcesPage.css";
+import "./resource_page.css";
 import YouTube from 'react-youtube';
 
-function ResourcesPage() {
+function Resources() {
     const opts = {
         height: '260',
         width: '450',
@@ -46,4 +46,4 @@ function ResourcesPage() {
   );
 }
 
-export default ResourcesPage;
+export default Resources;
