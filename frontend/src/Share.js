@@ -7,7 +7,7 @@ import ins from "./instagram logo.png";
 // share RTA to social media
 function Share() {
   return (
-    <div className="app">
+    <div>
       <Navbar/> 
       <body className='share-body'>
         <p style={{fontSize:"25pt", fontFamily:"Baskerville Old Face"}}>Screenshot this!</p>

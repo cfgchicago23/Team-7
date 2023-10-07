@@ -31,6 +31,7 @@ function SignUpForm() {
     console.log(credentials);
     const isSignUpSuccessful = true; //mongodb connection
     if (isSignUpSuccessful) {
+        
       navigate('/profile');
     }
   };
