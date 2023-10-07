@@ -40,6 +40,21 @@ app.post('/insertUsername', (req, res) => {
   });
 });
 
+
+const players = [
+  { id: 1, name: "Player1", points: 100 },
+  { id: 2, name: "Player2", points: 150 },
+  { id: 3, name: "Player3", points: 80 },
+  { id: 4, name: "Player4", points: 110 },
+  { id: 5, name: "Player5", points: 90 },
+  { id: 6, name: "Player6", points: 170 },
+];
+
+app.get('/leaderboard', (req, res) => {
+  const topPlayers = players.sort((a, b) => b.points - a.points).slice(0, 5);
+  res.json(topPlayers);
+});
+
 // Start server
 app.listen(port, () => {
   console.log(`Server started on http://localhost:${port}`);
