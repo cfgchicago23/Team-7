@@ -2,11 +2,12 @@ import React from "react"
 import event_img from "./upcoming_events.jpg"
 import star_img from "./star.png"
 import "./Card.css"
+import Navbar from '../navbar';
 
 function Card(props) {
     return (
         <div className="contacts">
-        
+            <Navbar /> 
             <div className="contact-card">
                 <img src={event_img}/>
                 <h3>Mr. Whiskerson</h3>
