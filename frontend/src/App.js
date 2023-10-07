@@ -5,7 +5,7 @@ import Profile from "./pages/Profile"
 import Share from "./pages/Share"
 import Resources from "./pages/Resources"
 import './App.css';
-
+// code that wotks with navbar
 function App() {
   let component
   switch(window.location.pathname){
