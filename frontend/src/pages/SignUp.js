@@ -1,5 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+
+const appSettings = {
+  databaseURL: "https://jphackathon-ee6c3-default-rtdb.firebaseio.com/"
+}
+
+const app = initializeApp(appSettings)
+const database = getDatabase(app)
+const put_user_name = ref(database, "names_for_users")
+
+var firstNameKey = "";
 
 function SignUpForm() {
     //states for key user details
@@ -33,6 +45,16 @@ function SignUpForm() {
     if (isSignUpSuccessful) {
         
       navigate('/profile');
+      /*push(put_user_name, credentials.firstName)*/
+      /*firstNameKey = database.collection.doc(credentials.firstName.getKey());*/
+      var newRef = put_user_name.push();
+      firstNameKey = newRef;
+      var newItem = {
+        id: newRef.key(),
+        name: credentials.firstName
+      }
+      newRef.set(credentials.firstName);
+      
     }
   };
 
@@ -115,4 +137,5 @@ function SignUpForm() {
   );
 }
 
+export {firstNameKey}
 export default SignUpForm;

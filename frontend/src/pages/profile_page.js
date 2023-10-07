@@ -4,6 +4,17 @@ import event_img from "./upcoming_events.jpg"
 import star_img from "./star.png"
 import user_prof from "./userprofile.png"
 import Navbar from '../navbar';
+import { firstNameKey } from './SignUp';
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+
+const appSettings = {
+    databaseURL: "https://jphackathon-ee6c3-default-rtdb.firebaseio.com/"
+}
+
+const app = initializeApp(appSettings)
+const database = getDatabase(app)
+const signUpInDB = ref(database, "users")
 
 function Profile() {
     const [selectedTag, setSelectedTag] = useState(null);
@@ -54,7 +65,7 @@ function Profile() {
             <div className="profile-image"></div>
                 <div className="profile-info">
                     <div className="profile-text">
-                    <h2>John Smith</h2>
+                    <h2>{ref(database, `names_for_users/${firstNameKey}`)}</h2>
                         <p>
                             Hours Volunteered: <span className="star"></span> {hoursVolunteered}⭐
                             </p>

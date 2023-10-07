@@ -10,6 +10,7 @@ const appSettings = {
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const signUpInDB = ref(database, "users")
+
  
 function LoginForm() {
   const [credentials, setCredentials] = useState({
