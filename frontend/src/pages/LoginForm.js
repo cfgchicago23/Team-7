@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
+//making login form page
 function LoginForm() {
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
   });
-
+  //input change
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setCredentials({
@@ -13,10 +14,9 @@ function LoginForm() {
       [name]: value
     });
   };
-
+  //submit handle
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Normally, here you'd send 'credentials' to a backend service for authentication.
     console.log(credentials);
   };
 

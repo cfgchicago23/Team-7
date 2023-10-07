@@ -1,52 +1,164 @@
-/* Overall application styling with lighter green and black fonts */
 .app {
   font-family: 'Arial', sans-serif;
-  color: black; /* Lighter green font color */
-  background-color: white; /* Black background for the entire app */
+  color: #333;
+  padding: 20px;
+  background: #e9ecef;
+  max-width: 1000px; /* Increased width */
+  margin: 20px auto;
+  border-radius: 8px;
 }
 
 .app-header {
+  background: #006400; /* Dark green */
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px 8px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #8FCB81; /* Slightly off-black for the header for some contrast */
-  padding: 10px 20px;
 }
 
-/* Updated login button */
+h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  color: #000; /* Black color */
+}
+
 .login-button {
-  background-color: #8FCB81; /* Lighter green color */
-  color: black; /* Black font color for contrast against the green background */
-  border: 2px  #8FCB81; /* Lighter green border */
+  background-color: green; /* Placeholder color */
+  color: #efefef; /* Placeholder color */
+  border: 2px solid transparent; 
+  padding: 15px 30px; /* Increased padding for a larger button */
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.25rem; /* Increased font size */
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+}
+
+.login-button:hover {
+  background-color: black; 
+  transform: scale(1.05); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); 
+}
+
+
+.app-content {
+  padding: 30px;
+  background: white;
+  border-radius: 0 0 8px 8px;
+}
+
+h2, h3 {
+  color: #006400; 
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.6;
+  color: #000;
+}
+
+a {
+  color: #006400; 
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.image-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.signup-button {
+  background-color: green; 
+  color: #efefef; 
+  border: 2px solid transparent; 
   padding: 15px 30px; 
   border-radius: 5px;
   cursor: pointer;
   outline: none;
   font-size: 1.25rem; 
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); /* Shadow for depth */
-  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
+  transition: transform 0.2s, box-shadow 0.2s; 
 }
 
-.login-button:hover {
-  background-color: #76B56D; /* Slightly darker shade of green for hover effect */
-  border-color: #76B56D; /* Slightly darker shade of green for hover effect */
-  transform: scale(1.05); /* Button slightly enlarges on hover */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+.signup-button:hover {
+  background-color: black;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); 
 }
 
-.share-body {
-  text-align: center;
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f5f7;
 }
 
-.screenshot-box {
-  display: inline-block;
-  width: 180px;
-  height: 320px;
-  background: black;
+/* Form Styles */
+.login-form {
+  width: 300px;
+  padding: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Title's color adjusted for better visibility against darker backgrounds */
-h1 {
-  color: black; /* Lighter green */
+.login-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #d0d3d8;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #0077ff;
+}
+
+.login-form button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #0055cc;
 }
