@@ -10,7 +10,7 @@ function Leaderboard() {
             .then(response => setPlayers(response.data))
             .catch(error => console.error("Error fetching data: ", error));
     }, []);
-
+    
     return (
         //display leaderboard
         
