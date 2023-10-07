@@ -3,18 +3,19 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import volunteering from "./volunteering.jpg";
 import LoginForm from './pages/LoginForm';  // Ensure the path is correct
-
+import Navbar_Login from './navbar_login';
 function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
+      <Navbar_Login/>
+      {/* <header className="app-header">
         <h1>Rebuilding Together Aurora</h1>
         <div className="button-container">
             <Link to="/login" className="login-button">Login</Link>
             <Link to="/signup" className="signup-button">Sign Up</Link>
         </div>
-      </header>
+      </header> */}
       <section className="app-content">
         <div className="image-container">
             <img src={volunteering} alt="Man volunteering" />
