@@ -3,6 +3,8 @@ import YouTube from "react-youtube";
 import { useState, useEffect } from "react";
 
 function Resources() {
+
+  // JSON objects of videos for each module
   const videoLinks = [
     {
       "module-title": "Painting",
@@ -57,15 +59,6 @@ function Resources() {
     },
   ];
 
-
-  const opts = {
-    height: "380",
-    width: "650",
-    playerVars: {
-      autoplay: 0, // Set to 1 if you want the video to autoplay
-    },
-  };
-
   const [selectedModule, setSelectedModule] = useState("Painting");
   const [moduleButtonColors, setModuleButtonColors] = useState([
     "#668A3D",
@@ -75,20 +68,36 @@ function Resources() {
   const [videoList, setVideoList] = useState(videoLinks[0].videos);
   const [videoID, setVideoID] = useState("hlJUezuNFuI");
 
+  // Let the user know how many stars they earn from finishing watching the video
+  const handleVideoEnd = (event) => {
+    alert('You have earned 2 stars!')
+  };
+
+  const opts = {
+    height: "380",
+    width: "650",
+    playerVars: {
+      autoplay: 0, // Set to 1 if you want the video to autoplay
+    }
+  };
+
+  // Save the state of the selected module
   const handleSelectedModule = (e) => {
-    // store the value
     setSelectedModule(e.target.value);
     console.log(selectedModule);
   };
 
+  // Switch the video via its id
   const changeVideo = (youtubeID) => {
     setVideoID(youtubeID);
   };
 
+
   useEffect(() => {
-    // restart the colors
+    // restart the module colors
     let updatedModuleButtonColors = ["#FFFFFF", "#FFFFFF", "#FFFFFF"];
 
+    // update the module button's color and get the video list based on the user selection's module
     if (selectedModule === "Painting") {
       updatedModuleButtonColors[0] = "#668A3D";
       setVideoList(videoLinks[0].videos);
@@ -100,6 +109,7 @@ function Resources() {
       setVideoList(videoLinks[2].videos);
     }
 
+    // save the state of the new module buttons
     setModuleButtonColors(updatedModuleButtonColors);
   }, [selectedModule]);
 
@@ -146,7 +156,6 @@ function Resources() {
       </div>
 
       <div className="resource-module-container">
-        {/* Need to make this flex */}
         <div className="resource-module-container-contents">
           <div className="resource-module-video-list">
             {videoList.map((video, index) => {
@@ -163,7 +172,7 @@ function Resources() {
             })}
           </div>
 
-          <YouTube className="video-item" videoId={videoID} opts={opts} />
+          <YouTube className="video-item" videoId={videoID} opts={opts} onEnd={handleVideoEnd} />
         </div>
       </div>
     </div>
