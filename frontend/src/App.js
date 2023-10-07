@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import ResourcesPage from './ResourcesPage';
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
         <button className="login-button">Login</button>
       </header>
 
-      <ResourcesPage />
       {}
     </div>
   );
