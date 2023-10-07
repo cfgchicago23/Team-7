@@ -1,21 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import volunteering from "./volunteering.jpg" 
-//home app
+import volunteering from "./volunteering.jpg";
+import LoginForm from './pages/LoginForm';  // Ensure the path is correct
+
 function App() {
   return (
     <div className="app">
       <header className="app-header">
         <h1>Rebuilding Together Aurora</h1>
         <div className="button-container">
-        <button className="login-button">Login</button>
-        <button className="signup-button">Sign Up</button>
+            <Link to="/login" className="login-button">Login</Link>
+            <button className="signup-button">Sign Up</button>
         </div>
       </header>
       <section className="app-content">
-      <div className="image-container">
-        <img src={volunteering} alt="Man volunteering" />
-      </div>
+        <div className="image-container">
+            <img src={volunteering} alt="Man volunteering" />
+        </div>
+        
         <p>Together we repair homes, revitalize communities, and rebuild lives. Rebuilding Together Aurora is a safe and healthy housing organization that assists homeowners with critical home repairs, safety modifications, and energy efficiency upgrades. Our volunteers use tools like hammers and paint brushes to help qualified homeowners in need, playing a pivotal role in improving living conditions and invigorating the community.</p>
 
         <p>For three decades, we've offered free essential home repairs to low-income Aurora residents including senior citizens, military veterans, individuals with disabilities, and families living in unsafe conditions. Our mission is to bridge the gap between homeowners and volunteers, ensuring everyone in Aurora has a safe and healthy living environment.</p>
@@ -33,4 +36,6 @@ function App() {
   );
 }
 
+
 export default App;
+
