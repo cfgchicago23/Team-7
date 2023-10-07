@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './profile_page.css'; // Import your CSS file
 import event_img from "./upcoming_events.jpg"
 import star_img from "./star.png"
+import Navbar from '../navbar';
 
 function Profile() {
     const [selectedTag, setSelectedTag] = useState(null);
@@ -47,6 +48,7 @@ function Profile() {
 
     return (
         <div>
+            <Navbar /> 
             <div className="profile-container">
             <div className="profile-image"></div>
                 <div className="profile-info">

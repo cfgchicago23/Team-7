@@ -1,6 +1,7 @@
 import "./resource_page.css";
 import YouTube from "react-youtube";
 import { useState, useEffect } from "react";
+import Navbar from "../navbar";
 
 function Resources() {
   // JSON objects of videos for each module
@@ -115,6 +116,7 @@ function Resources() {
 
   return (
     <div className="resource-page">
+      <Navbar /> 
       <div className="resource-page-header">
         <h2 className="resource-page-title">Resources</h2>
         <p>

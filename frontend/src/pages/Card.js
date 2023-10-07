@@ -6,11 +6,12 @@ import builders from "./builders.png"
 import roof from "./roof.png"
 import house from "./house.jpeg"
 import "./Card.css"
+import Navbar from '../navbar';
 
 function Card(props) {
     return (
         <div className="contacts">
-        
+            <Navbar /> 
             <div className="contact-card" onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSd8xuvjdCEVRUm-bKZPTaoOFaerkG2HVD_ngcb6U64TAjv6SA/viewform?usp=sf_link", '_blank')}  >
                 <img src={house}/>
                 <h3>Rebuild This Home!</h3>

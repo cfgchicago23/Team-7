@@ -3,24 +3,9 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import volunteering from "./volunteering.jpg";
 import LoginForm from './pages/LoginForm';  // Ensure the path is correct
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "",
-  authDomain: "jphackathon-ee6c3.firebaseapp.com",
-  projectId: "jphackathon-ee6c3",
-  storageBucket: "jphackathon-ee6c3.appspot.com",
-  messagingSenderId: "314441140769",
-  appId: "1:314441140769:web:85094eb2ad30a1c238f160"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
 function App() {
+  
   return (
     <div className="app">
       <header className="app-header">
@@ -51,4 +36,3 @@ function App() {
 
 
 export default App;
-
