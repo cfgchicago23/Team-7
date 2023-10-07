@@ -310,3 +310,16 @@
     margin: 0;
     color: #333;
 }
+
+.para-1 {
+  background: #FFFFF0;
+  padding: 25px;
+  border-radius: 10px;
+  border-bottom: 3px green;
+}
+
+.section-2 {
+  background-color: #FFFFF0;
+  padding: 25px;
+  border-radius: 10px;
+}
