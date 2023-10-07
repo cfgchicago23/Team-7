@@ -17,6 +17,9 @@ const Layout = () => {
           <li>
             <Link to="/profile">Profile Page</Link>
           </li>
+          <li>
+            <Link to="/card">Events</Link>
+          </li>
         </ul>
       </nav>
 

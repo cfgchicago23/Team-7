@@ -5,6 +5,7 @@ import Home from "./App";
 import Share from "./Share";
 import Resources from "./pages/resource_page";
 import Profile from "./pages/profile_page";
+import Card from "./pages/Card"
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="share" element={<Share />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="card" element={<Card />} />
 
         </Route>
       </Routes>
