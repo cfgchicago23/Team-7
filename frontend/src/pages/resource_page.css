@@ -39,3 +39,25 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
+.resource-select-module-container {
+    text-align: center;
+}
+
+.module-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.module-button {
+    border-radius: 3px;
+    padding: 10px;
+    border-color: transparent;
+    margin: 10px;
+}
+
+.module-button:hover {
+    cursor: pointer;
+    border-color: black;
+}
