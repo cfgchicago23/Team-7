@@ -15,8 +15,12 @@ function Profile() {
                 <div className="profile-info">
                     <h2>John Doe</h2>
                     <div className="profile-text">
-                        <p>Hours volunteered: <span className="star">⭐</span> 500</p>
+                    <h2>John Smith</h2>
+                        <p>
+                            Hours Volunteered: <span className="star"></span> {hoursVolunteered}⭐
+                            </p>
                     </div>
+                    
                     <button className="share-button" onClick={handleShare}>
                         Share
                     </button>

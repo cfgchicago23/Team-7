@@ -9,6 +9,8 @@
 .profile-text {
     margin-top: 0;
     margin-bottom: 0;
+    align-items: center;
+    display: flex;
 }
 
 .profile-container {
