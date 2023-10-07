@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+var user = '';
 
 function SignUpForm() {
     //states for key user details
@@ -11,7 +14,7 @@ function SignUpForm() {
     password: '',
     confirmPassword: ''
   });
-
+ 
   const navigate = useNavigate();
   //set credentials
   const handleInputChange = (event) => {
@@ -28,10 +31,21 @@ function SignUpForm() {
       alert('Passwords do not match!');
       return;
     }
+    const userData = {
+        firstName: credentials.firstName,
+        lastName: credentials.lastName,
+        email: credentials.email,
+        password: credentials.password,
+        hours: 0,
+        score: 0
+    };
+    
+
     console.log(credentials);
     const isSignUpSuccessful = true; //mongodb connection
     if (isSignUpSuccessful) {
-        
+        user = credentials.username;
+        localStorage.setItem(credentials.username, JSON.stringify(userData));
       navigate('/profile');
     }
   };
@@ -114,5 +128,5 @@ function SignUpForm() {
     </div>
   );
 }
-
+export {user};
 export default SignUpForm;

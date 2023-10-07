@@ -2,15 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
-var user = '';
-const appSettings = {
-  databaseURL: "https://jphackathon-ee6c3-default-rtdb.firebaseio.com/"
-}
-
-const app = initializeApp(appSettings)
-const database = getDatabase(app)
-const signUpInDB = ref(database, "users")
- 
+import {user} from './SignUp';
+var user2 = '';
 function LoginForm() {
   const [credentials, setCredentials] = useState({
     username: '',
@@ -30,12 +23,16 @@ function LoginForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(credentials);
-    user = credentials.username;
-    const isLoginSuccessful = true; //placeholder for mongo
-    if (isLoginSuccessful) {
-      navigate('/profile');
-      push(signUpInDB, credentials)
+    const isLoginSuccessful = false; //placeholder for mongo
+    const retrievedUser = JSON.parse(localStorage.getItem(credentials.username));
+    user2 = credentials.username;
+    if (retrievedUser.password === credentials.password) {
+        console.log("Logged in");
+        navigate('/profile');
+    } else {
+        console.log("Failed Login");
     }
+    
   };
 
   return (
@@ -76,5 +73,5 @@ function LoginForm() {
     </div>
   );
 }
-export {user};
+export {user2};
 export default LoginForm;

@@ -4,7 +4,8 @@ import event_img from "./upcoming_events.jpg"
 import star_img from "./star.png"
 import user_prof from "./userprofile.png"
 import Navbar from '../navbar';
-
+import {user} from './SignUp';
+import {user2} from './LoginForm';
 function Profile() {
     const [selectedTag, setSelectedTag] = useState(null);
 
@@ -46,7 +47,15 @@ function Profile() {
 
     const skillButtons = ["Painting", "Landscaping", "Carpentry", "Flooring", "General Volunteer"];
     const hoursVolunteered = 500;
-
+    const pointsEarned = 5;
+    var user3 = ''
+    if (user.length > user2.length) {
+        user3 = user;
+    } else {
+        user3 = user2;
+    }
+    console.log(user3);
+    const retrievedUser = JSON.parse(localStorage.getItem(user3));
     return (
         <div>
             <Navbar /> 
@@ -54,14 +63,14 @@ function Profile() {
             <div className="profile-image"></div>
                 <div className="profile-info">
                     <div className="profile-text">
-                    <h2>John Smith</h2>
+                    <h2> {retrievedUser.firstName} {retrievedUser.lastName}</h2>
                         <p>
-                            Hours Volunteered: <span className="star"></span> {hoursVolunteered}⭐
-                            </p>
+                            Hours Volunteered: {retrievedUser.hours}<br />
+                            Stars Earned: <span className="star"></span> {retrievedUser.score}⭐</p>
                     </div>
                     
-                    <button className="share-button" onClick={handleShare}>
-                        Share
+                    <button className="share-button" onClick={() => window.open("https://www.instagram.com/", '_blank')}>
+                        Share 
                     </button>
                 </div>
                 <div className="skills">
