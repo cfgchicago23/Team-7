@@ -62,3 +62,24 @@
 .share-button:hover {
     background-color: #0056b3; 
 }
+<<<<<<< HEAD
+=======
+
+.additional-rectangle {
+    background-color: antiquewhite;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin: 20px 0;
+}
+
+.contact-card .skill-button {
+    margin-top: 10px;
+}
+>>>>>>> 226ab94d7892019747b45fcea846720b8291e0cc
