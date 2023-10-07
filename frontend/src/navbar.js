@@ -3,7 +3,9 @@ import logo from './rebuilding_aurora_logo.png';
 
 export default function Navbar(){
     return <nav className = "nav">
+        <a href="http://www.rtaurora.org/">
         <img src={logo} alt="Logo" className="logo" />
+        </a>
         <ul>
             <li>
                 <a href = "/card">Events</a>
