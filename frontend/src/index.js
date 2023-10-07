@@ -6,6 +6,7 @@ import Share from "./Share";
 import LoginForm from "./pages/LoginForm";
 import Resources from "./pages/resource_page";
 import Profile from "./pages/profile_page";
+import Card from "./pages/Card"
 
 export default function App() {
   return (

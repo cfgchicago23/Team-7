@@ -3,7 +3,7 @@ import event_img from "./upcoming_events.jpg"
 import star_img from "./star.png"
 import "./Card.css"
 
-export default function Card(props) {
+function Card(props) {
     return (
         <div className="contacts">
         
@@ -62,3 +62,5 @@ export default function Card(props) {
         </div>
     )
 }
+
+export default Card;
