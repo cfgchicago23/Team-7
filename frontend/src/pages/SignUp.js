@@ -47,6 +47,16 @@ function SignUpForm() {
         user = credentials.username;
         localStorage.setItem(credentials.username, JSON.stringify(userData));
       navigate('/profile');
+      /*push(put_user_name, credentials.firstName)*/
+      /*firstNameKey = database.collection.doc(credentials.firstName.getKey());*/
+      /*var newRef = put_user_name.push();
+      firstNameKey = newRef;
+      var newItem = {
+        id: newRef.key(),
+        name: credentials.firstName
+      }
+      newRef.set(credentials.firstName);*/
+      
     }
   };
 

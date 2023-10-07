@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from '../navbar';
+import './Leaderboard.css'
 function Leaderboard() {
     const [players, setPlayers] = useState([]);
     //call backend to get leaderboard

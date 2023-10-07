@@ -90,6 +90,8 @@
     gap: 20px;
   }
 
+  
+
   .login-form label {
     font-weight: bold;
     margin-bottom: 5px;
@@ -139,17 +141,20 @@
 
   .login-button:hover, .signup-button:hover {
     background-color: black;
+    color:white;
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   }
 
   .share-body {
+    font-family: 'Arial', sans-serif;
     text-align: center;
     padding-top: 40px;
     padding-bottom: 30px;
   }
 
 .screenshot-box {
+  font-family: 'Arial', sans-serif;
   display: inline-block;
   width: 180px;
   height: 320px;
@@ -157,6 +162,7 @@
 }
 
 .social-links {
+  font-family: 'Arial', sans-serif;
   display: inline-flex;
   gap: 20px;
   padding-top: 15px;
