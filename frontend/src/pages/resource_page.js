@@ -3,7 +3,6 @@ import YouTube from "react-youtube";
 import { useState, useEffect } from "react";
 
 function Resources() {
-
   // JSON objects of videos for each module
   const videoLinks = [
     {
