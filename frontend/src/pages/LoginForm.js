@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 import {user} from './SignUp';
-var user2 = '';
-function LoginForm() {
+// var user2 = '';
+function LoginForm({user2, setUser2}) {
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
@@ -22,10 +22,18 @@ function LoginForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(credentials);
+    // console.log(credentials);
+    setUser2(credentials.username);
     const isLoginSuccessful = false; //placeholder for mongo
     const retrievedUser = JSON.parse(localStorage.getItem(credentials.username));
-    user2 = credentials.username;
+
+    console.log("Hello" + credentials.username)
+    console.log("This is " + user2)
+    // setUser2(credentials.username);
+    // console.log("This is stored" + user2)
+
+    console.log("This is the username logged in" + user2)
+
     if (retrievedUser.password === credentials.password) {
         console.log("Logged in");
         navigate('/profile');
@@ -73,5 +81,5 @@ function LoginForm() {
     </div>
   );
 }
-export {user2};
+// export {user2};
 export default LoginForm;
