@@ -146,14 +146,21 @@
   .share-body {
     text-align: center;
     padding-top: 40px;
+    padding-bottom: 30px;
   }
 
-  .screenshot-box {
-    display: inline-block;
-    width: 180px;
-    height: 320px;
-    background: #92d0d1;
-  }
+.screenshot-box {
+  display: inline-block;
+  width: 180px;
+  height: 320px;
+  background: #92d0d1;
+}
+
+.social-links {
+  display: inline-flex;
+  gap: 20px;
+  padding-top: 15px;
+}
 
   h1 {
     color: black; 
@@ -170,6 +177,13 @@
     padding-top: 35px;
   }
 
+#link-pic {
+  display: block;
+  max-width:40px;
+  max-height:35px;
+  width: auto;
+  height: auto;
+}
 
   .signup-form-container {
     display: flex;
