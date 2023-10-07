@@ -48,14 +48,15 @@ function Profile() {
     const skillButtons = ["Painting", "Landscaping", "Carpentry", "Flooring", "General Volunteer"];
     const hoursVolunteered = 500;
     const pointsEarned = 5;
-    var user3 = ''
+    var user3 = '';
     if (user.length > user2.length) {
         user3 = user;
     } else {
         user3 = user2;
     }
     console.log(user3);
-    const retrievedUser = JSON.parse(localStorage.getItem(user3));
+    const retrievedUser = JSON.parse(localStorage.getItem('rohan'));
+    console.log(retrievedUser);
     return (
         <div>
             <Navbar /> 

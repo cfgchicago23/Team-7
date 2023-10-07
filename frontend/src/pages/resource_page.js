@@ -4,6 +4,15 @@ import "./resource_page.css";
 import YouTube from "react-youtube";
 import { useState, useEffect } from "react";
 import Navbar from "../navbar";
+import {user} from './SignUp';
+import {user2} from './LoginForm';
+var user3 = ''
+    if (user.length > user2.length) {
+        user3 = user;
+    } else {
+        user3 = user2;
+    }
+const retrievedUser = JSON.parse(localStorage.getItem('rohan'));
 
 function Resources() {
   // JSON objects of videos for each module
@@ -74,6 +83,11 @@ function Resources() {
   // Let the user know how many stars they earn from finishing watching the video
   const handleVideoEnd = (event) => {
     alert('You have earned 2 stars!')
+    //add to score
+    console.log(retrievedUser);
+    retrievedUser.score = retrievedUser.score+ 2;
+    localStorage.setItem('rohan', JSON.stringify(retrievedUser));
+
   };
 
   const opts = {

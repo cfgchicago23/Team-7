@@ -7,7 +7,14 @@ import roof from "./roof.png"
 import house from "./house.jpeg"
 import "./Card.css"
 import Navbar from '../navbar';
-
+import {user} from './SignUp';
+import {user2} from './LoginForm';
+var user3 = ''
+    if (user.length > user2.length) {
+        user3 = user;
+    } else {
+        user3 = user2;
+    }
 function Card(props) {
     return (
         <div className="contacts">
