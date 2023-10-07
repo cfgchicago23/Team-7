@@ -4,62 +4,73 @@ import { useState, useEffect } from "react";
 
 function Resources() {
   const videoLinks = [
-    {"module-title": "Painting",
-    "videos": [{
-      "title": "a",
-      "video_id": "UdeZkJEv5xU"
-      },
-      {
-        "title": "b",
-        "video_id": "syMnmDrp2qY"
-      },
-      {
-        "title": "c",
-        "video_id": "39Cw42fWTmc"
-      }
-    ]},
+    {
+      "module-title": "Painting",
+      videos: [
+        {
+          title: "a",
+          video_id: "UdeZkJEv5xU",
+        },
+        {
+          title: "b",
+          video_id: "syMnmDrp2qY",
+        },
+        {
+          title: "c",
+          video_id: "39Cw42fWTmc",
+        },
+      ],
+    },
     {
       "module-title": "Woodcutting",
-      "videos": [{
-        "title": "",
-        "video_id": "UdeZkJEv5xU"
+      videos: [
+        {
+          title: "",
+          video_id: "UdeZkJEv5xU",
         },
         {
-          "title": "e",
-          "video_id": "syMnmDrp2qY"
+          title: "e",
+          video_id: "syMnmDrp2qY",
         },
         {
-          "title": "f",
-          "video_id": "39Cw42fWTmc"
-        }
-      ]},
-      {
-        "module-title": "Plumbering",
-        "videos": [{
-          "title": "g",
-          "video_id": "UdeZkJEv5xU"
-          },
-          {
-            "title": "h",
-            "video_id": "syMnmDrp2qY"
-          },
-          {
-            "title": "e",
-            "video_id": "39Cw42fWTmc"
-          }
-        ]}
-  ]
+          title: "f",
+          video_id: "39Cw42fWTmc",
+        },
+      ],
+    },
+    {
+      "module-title": "Plumbering",
+      videos: [
+        {
+          title: "g",
+          video_id: "UdeZkJEv5xU",
+        },
+        {
+          title: "h",
+          video_id: "syMnmDrp2qY",
+        },
+        {
+          title: "e",
+          video_id: "39Cw42fWTmc",
+        },
+      ],
+    },
+  ];
 
   const opts = {
-    height: "260",
-    width: "450",
+    height: "380",
+    width: "650",
     playerVars: {
       autoplay: 0, // Set to 1 if you want the video to autoplay
     },
   };
 
   const [selectedModule, setSelectedModule] = useState("Painting");
-  const [moduleButtonColors, setModuleButtonColors] = useState(["#668A3D", "#FFFFFF", "#FFFFFF"]);
+  const [moduleButtonColors, setModuleButtonColors] = useState([
+    "#668A3D",
+    "#FFFFFF",
+    "#FFFFFF",
+  ]);
   const [videoList, setVideoList] = useState(videoLinks[0].videos);
   const [videoID, setVideoID] = useState("hlJUezuNFuI");
 
@@ -67,11 +78,11 @@ function Resources() {
     // store the value
     setSelectedModule(e.target.value);
     console.log(selectedModule);
-  }
+  };
 
-  const changeVideo =(youtubeID) => {
+  const changeVideo = (youtubeID) => {
     setVideoID(youtubeID);
-  }
+  };
 
   useEffect(() => {
     // restart the colors
@@ -89,11 +100,9 @@ function Resources() {
     }
 
     setModuleButtonColors(updatedModuleButtonColors);
-
-  }, [selectedModule])
+  }, [selectedModule]);
 
   return (
-
     <div className="resource-page">
       <div className="resource-page-header">
         <h2 className="resource-page-title">Resources</h2>
@@ -104,14 +113,34 @@ function Resources() {
       </div>
 
       <div className="resource-select-module-container">
-        <h3>Choose a module you want to learn!</h3>
-        
-        <div className="resource-select-module-buttons">
-          <form>
-            <input className="module-button" type="button" value="Painting" onClick={handleSelectedModule} style={{backgroundColor : moduleButtonColors[0]}}></input>
-            <input className="module-button" type="button" value="Woodcutting" onClick={handleSelectedModule} style={{backgroundColor : moduleButtonColors[1]}}></input>
-            <input className="module-button" type="button" value="Plumbering" onClick={handleSelectedModule} style={{backgroundColor : moduleButtonColors[2]}}></input>
-          </form>
+        <div className="resource-select-module-container-contents">
+          <h3>Choose a module you want to learn!</h3>
+
+          <div className="resource-select-module-buttons">
+            <form>
+              <input
+                className="module-button"
+                type="button"
+                value="Painting"
+                onClick={handleSelectedModule}
+                style={{ backgroundColor: moduleButtonColors[0] }}
+              ></input>
+              <input
+                className="module-button"
+                type="button"
+                value="Woodcutting"
+                onClick={handleSelectedModule}
+                style={{ backgroundColor: moduleButtonColors[1] }}
+              ></input>
+              <input
+                className="module-button"
+                type="button"
+                value="Plumbering"
+                onClick={handleSelectedModule}
+                style={{ backgroundColor: moduleButtonColors[2] }}
+              ></input>
+            </form>
+          </div>
         </div>
       </div>
 
@@ -120,12 +149,17 @@ function Resources() {
         <div className="resource-module-container-contents">
           <div className="resource-module-video-list">
             {videoList.map((video, index) => {
-              console.log(videoLinks)
-              return(
-                <button className="video-button" key={index} onClick={() => changeVideo(video.video_id)}>{video.title}</button>
-              )
+              console.log(videoLinks);
+              return (
+                <button
+                  className="video-button"
+                  key={index}
+                  onClick={() => changeVideo(video.video_id)}
+                >
+                  {video.title}
+                </button>
+              );
             })}
-
           </div>
 
           <YouTube className="video-item" videoId={videoID} opts={opts} />
