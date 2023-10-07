@@ -72,7 +72,7 @@
 }
 
 .resource-module-container {
-    background-color: rgb(109, 50, 50);
+    background-color: antiquewhite;
     margin: 20px;
     border-radius: 10px;
 }
@@ -87,15 +87,16 @@
 }
 
 .video-button {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-wrap: wrap;
-    background-color: blanchedalmond;
+    background-color: rgb(205, 255, 211);
     border-color: transparent;
+    font-size: 18px;
 }
 
 .video-button:hover {
-    background-color: rgb(145, 119, 80);
+    background-color: rgb(80, 145, 80);
     color:white;
     cursor: pointer;
 }

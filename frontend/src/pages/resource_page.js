@@ -8,15 +8,15 @@ function Resources() {
       "module-title": "Painting",
       videos: [
         {
-          title: "a",
-          video_id: "UdeZkJEv5xU",
+          title: "Basic Painting Tips",
+          video_id: "CRXCB_3gLok",
         },
         {
-          title: "b",
+          title: "How to Paint the Doorstep",
           video_id: "syMnmDrp2qY",
         },
         {
-          title: "c",
+          title: "Doorstep Painting Tips",
           video_id: "39Cw42fWTmc",
         },
       ],
@@ -25,16 +25,16 @@ function Resources() {
       "module-title": "Woodcutting",
       videos: [
         {
-          title: "",
-          video_id: "UdeZkJEv5xU",
+          title: "How to Make a Sawbuck in 3 Minutes",
+          video_id: "waxfOrAjWvE",
         },
         {
-          title: "e",
-          video_id: "syMnmDrp2qY",
+          title: "How to Split Wood",
+          video_id: "aEZCgZV7Ecw",
         },
         {
-          title: "f",
-          video_id: "39Cw42fWTmc",
+          title: "Cutting Board for Beginners",
+          video_id: "Qj3cu9PlHHU",
         },
       ],
     },
@@ -42,20 +42,21 @@ function Resources() {
       "module-title": "Plumbering",
       videos: [
         {
-          title: "g",
+          title: "How to Connect a Broken PVC Pipe",
           video_id: "UdeZkJEv5xU",
         },
         {
-          title: "h",
-          video_id: "syMnmDrp2qY",
+          title: "How To Plumb A Bathroom In 20 Minutes",
+          video_id: "Jt0VfS6xw2U",
         },
         {
-          title: "e",
-          video_id: "39Cw42fWTmc",
+          title: "How To Vent Plumbing Pipe - Toilet, Bathroom Sink, and more!",
+          video_id: "XlHFdxSXR2s",
         },
       ],
     },
   ];
+
 
   const opts = {
     height: "380",
