@@ -37,16 +37,29 @@
 
 .share-body {
   text-align: center;
+  padding-top: 40px;
 }
 
 .screenshot-box {
   display: inline-block;
   width: 180px;
   height: 320px;
-  background: black;
+  background: #92d0d1;
 }
 
 /* Title's color adjusted for better visibility against darker backgrounds */
 h1 {
   color: black; /* Lighter green */
 }
+
+#trophy-pic {
+  display: block;
+  max-width:100px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 35px;
+}
+
