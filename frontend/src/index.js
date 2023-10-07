@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./App";
 import Share from "./Share";
 import LoginForm from "./pages/LoginForm";
+import Resources from "./pages/resource_page";
+import Profile from "./pages/profile_page";
 
 export default function App() {
   return (
@@ -12,7 +14,12 @@ export default function App() {
         {/* <Route path="/" element={<Layout />}> */}
           <Route path = "/" element={<Home />} />
           <Route path = "/login" element = {<LoginForm/>}/>
-        {/* </Route> */}
+          <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="share" element={<Share />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
